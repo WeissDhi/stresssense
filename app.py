@@ -59,8 +59,7 @@ def index():
         pred_prob = model.predict_proba(input_df)[0][1]
         prediction = round(pred_prob * 100, 2)
 
-        if prediction > 92:
-            prediction = 100.0
+
 
     return render_template("index.html", prediction=prediction)
 
