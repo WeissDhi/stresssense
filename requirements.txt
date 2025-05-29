@@ -1,4 +1,5 @@
-Flask
-pandas
+flask
 catboost
+scikit-learn
+pandas
 joblib
