@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+
+{% block title %}Edukasi Kesehatan Mental - StressSense{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-blue-800 mb-4">Edukasi Kesehatan Mental</h1>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            Pelajari lebih lanjut tentang kesehatan mental, tanda-tanda depresi, dan cara menjaga kesehatan mental Anda.
+        </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Understanding Depression -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+                    <i data-feather="brain" class="w-6 h-6 mr-2"></i>
+                    Memahami Depresi
+                </h2>
+                <div class="prose prose-blue max-w-none">
+                    <p class="text-gray-600 mb-4">
+                        Depresi adalah gangguan suasana hati yang serius yang mempengaruhi cara Anda merasa, berpikir, dan berperilaku. 
+                        Ini dapat menyebabkan berbagai masalah emosional dan fisik.
+                    </p>
+                    <h3 class="text-lg font-semibold text-blue-700 mt-6 mb-3">Tanda-tanda Umum:</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                            <span>Perasaan sedih, kosong, atau putus asa yang berkelanjutan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                            <span>Kehilangan minat atau kesenangan dalam aktivitas yang biasa dinikmati</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                            <span>Perubahan pola tidur (insomnia atau tidur berlebihan)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                            <span>Perubahan nafsu makan dan berat badan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coping Strategies -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-green-800 mb-4 flex items-center">
+                    <i data-feather="heart" class="w-6 h-6 mr-2"></i>
+                    Strategi Mengatasi
+                </h2>
+                <div class="prose prose-green max-w-none">
+                    <p class="text-gray-600 mb-4">
+                        Ada berbagai cara untuk mengelola dan mengatasi gejala depresi. Berikut beberapa strategi yang dapat membantu:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-green-800 mb-2">1. Rutinitas Sehat</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-1"></i>
+                                    <span>Jadwalkan waktu tidur dan bangun yang teratur</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-1"></i>
+                                    <span>Olahraga ringan secara teratur</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="w-5 h-5 text-green-500 mr-2 mt-1"></i>
+                                    <span>Konsumsi makanan bergizi seimbang</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-blue-800 mb-2">2. Dukungan Sosial</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-feather="users" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                                    <span>Jaga komunikasi dengan keluarga dan teman</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="users" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                                    <span>Bergabung dengan kelompok dukungan</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="users" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                                    <span>Bicarakan perasaan Anda dengan orang yang dipercaya</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Help -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-purple-800 mb-4 flex items-center">
+                    <i data-feather="user-plus" class="w-6 h-6 mr-2"></i>
+                    Bantuan Profesional
+                </h2>
+                <div class="prose prose-purple max-w-none">
+                    <p class="text-gray-600 mb-4">
+                        Penting untuk mengetahui kapan harus mencari bantuan profesional. Berikut adalah beberapa situasi yang memerlukan bantuan:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-purple-800 mb-2">Kapan Mencari Bantuan?</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-feather="alert-circle" class="w-5 h-5 text-purple-500 mr-2 mt-1"></i>
+                                    <span>Gejala berlangsung lebih dari 2 minggu</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="alert-circle" class="w-5 h-5 text-purple-500 mr-2 mt-1"></i>
+                                    <span>Mengganggu aktivitas sehari-hari</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="alert-circle" class="w-5 h-5 text-purple-500 mr-2 mt-1"></i>
+                                    <span>Memiliki pikiran untuk menyakiti diri sendiri</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-yellow-800 mb-2">Jenis Bantuan yang Tersedia</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-feather="heart" class="w-5 h-5 text-yellow-500 mr-2 mt-1"></i>
+                                    <span>Konseling dengan psikolog</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="heart" class="w-5 h-5 text-yellow-500 mr-2 mt-1"></i>
+                                    <span>Terapi dengan psikiater</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="heart" class="w-5 h-5 text-yellow-500 mr-2 mt-1"></i>
+                                    <span>Kelompok dukungan</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Self-Care Tips -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-pink-800 mb-4 flex items-center">
+                    <i data-feather="sun" class="w-6 h-6 mr-2"></i>
+                    Tips Self-Care
+                </h2>
+                <div class="prose prose-pink max-w-none">
+                    <p class="text-gray-600 mb-4">
+                        Praktik self-care yang konsisten dapat membantu menjaga kesehatan mental Anda:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-pink-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-pink-800 mb-2">Aktivitas Fisik</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-feather="activity" class="w-5 h-5 text-pink-500 mr-2 mt-1"></i>
+                                    <span>Olahraga ringan 30 menit sehari</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="activity" class="w-5 h-5 text-pink-500 mr-2 mt-1"></i>
+                                    <span>Jalan kaki di alam terbuka</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="activity" class="w-5 h-5 text-pink-500 mr-2 mt-1"></i>
+                                    <span>Yoga atau stretching</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-indigo-800 mb-2">Aktivitas Mental</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-feather="book" class="w-5 h-5 text-indigo-500 mr-2 mt-1"></i>
+                                    <span>Meditasi atau mindfulness</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="book" class="w-5 h-5 text-indigo-500 mr-2 mt-1"></i>
+                                    <span>Menulis jurnal</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="book" class="w-5 h-5 text-indigo-500 mr-2 mt-1"></i>
+                                    <span>Membaca buku favorit</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Contact -->
+    <div class="mt-8 bg-red-50 rounded-xl shadow-lg overflow-hidden">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-red-800 mb-4 flex items-center">
+                <i data-feather="phone" class="w-6 h-6 mr-2"></i>
+                Kontak Darurat
+            </h2>
+            <p class="text-gray-600 mb-4">
+                Jika Anda atau seseorang yang Anda kenal mengalami krisis kesehatan mental, segera hubungi:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-lg">
+                    <h3 class="font-semibold text-red-700 mb-2">Kemenkes RI</h3>
+                    <p class="text-2xl font-bold text-red-600">119</p>
+                    <p class="text-gray-600 text-sm">Layanan 24 jam</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <h3 class="font-semibold text-red-700 mb-2">RSJ Dr. Soeharto Heerdjan</h3>
+                    <p class="text-2xl font-bold text-red-600">(021) 5682841</p>
+                    <p class="text-gray-600 text-sm">Layanan 24 jam</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

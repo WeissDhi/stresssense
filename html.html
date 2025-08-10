@@ -1,0 +1,44 @@
+flowchart TD
+    A[START] --> B[Import Libraries:<br/>numpy, matplotlib]
+    B --> C[Input Data:<br/>time_data, velocity_data,<br/>displacement_data]
+    C --> D[Set Parameters:<br/>m=1.0, b=0.15, k=1.0<br/>n = len(time_data)]
+    D --> E[Calculate dt = diff(time_data)]
+    E --> F[Set Initial Conditions:<br/>x0=1.0, v0=0.0]
+    F --> G[Initialize Arrays:<br/>x_euler, v_euler, x_rk1, v_rk1,<br/>x_rk2, v_rk2, x_rk3, v_rk3,<br/>x_rk4, v_rk4]
+    G --> H[Set Initial Values:<br/>All arrays[0] = x0, v0]
+    H --> I[Define Functions:<br/>dx_dt(x,v) = v<br/>dv_dt(x,v) = -(b/m)*v - (k/m)*x]
+    I --> J[Initialize Loop Counter:<br/>i = 0]
+    J --> K{i < n-1?}
+    
+    K -->|Yes| L[EULER METHOD:<br/>x_euler[i+1] = x_euler[i] + dt[i] * dx_dt(x_euler[i], v_euler[i])<br/>v_euler[i+1] = v_euler[i] + dt[i] * dv_dt(x_euler[i], v_euler[i])]
+    
+    L --> M[RK1 METHOD:<br/>k1x = dt[i] * dx_dt(x_rk1[i], v_rk1[i])<br/>k1v = dt[i] * dv_dt(x_rk1[i], v_rk1[i])<br/>x_rk1[i+1] = x_rk1[i] + k1x<br/>v_rk1[i+1] = v_rk1[i] + k1v]
+    
+    M --> N[RK2 METHOD:<br/>k1x = dt[i] * dx_dt(x_rk2[i], v_rk2[i])<br/>k1v = dt[i] * dv_dt(x_rk2[i], v_rk2[i])<br/>k2x = dt[i] * dx_dt(x_rk2[i] + k1x/2, v_rk2[i] + k1v/2)<br/>k2v = dt[i] * dv_dt(x_rk2[i] + k1x/2, v_rk2[i] + k1v/2)<br/>x_rk2[i+1] = x_rk2[i] + k2x<br/>v_rk2[i+1] = v_rk2[i] + k2v]
+    
+    N --> O[RK3 METHOD:<br/>k1x, k1v = dt[i] * dx_dt, dv_dt<br/>k2x, k2v = dt[i] * dx_dt, dv_dt (midpoint)<br/>k3x, k3v = dt[i] * dx_dt, dv_dt (adjusted)<br/>x_rk3[i+1] = x_rk3[i] + (k1x + 4*k2x + k3x)/6<br/>v_rk3[i+1] = v_rk3[i] + (k1v + 4*k2v + k3v)/6]
+    
+    O --> P[RK4 METHOD:<br/>k1x, k1v = dt[i] * dx_dt, dv_dt<br/>k2x, k2v = dt[i] * dx_dt, dv_dt (k1/2)<br/>k3x, k3v = dt[i] * dx_dt, dv_dt (k2/2)<br/>k4x, k4v = dt[i] * dx_dt, dv_dt (k3)<br/>x_rk4[i+1] = x_rk4[i] + (k1x + 2*k2x + 2*k3x + k4x)/6<br/>v_rk4[i+1] = v_rk4[i] + (k1v + 2*k2v + 2*k3v + k4v)/6]
+    
+    P --> Q[Increment Counter:<br/>i = i + 1]
+    Q --> K
+    
+    K -->|No| R[Create Visualization:<br/>Plot all methods vs time<br/>Include actual data for comparison]
+    R --> S[Calculate Absolute Errors:<br/>error_x_euler = |x_euler - displacement_data|<br/>error_x_rk1 = |x_rk1 - displacement_data|<br/>error_x_rk2 = |x_rk2 - displacement_data|<br/>error_x_rk3 = |x_rk3 - displacement_data|<br/>error_x_rk4 = |x_rk4 - displacement_data|]
+    
+    S --> T[Display Error Table:<br/>Print errors for each time step<br/>and each method]
+    T --> U[Calculate Average Errors:<br/>Print mean error for each method]
+    U --> V[END]
+
+    style A fill:#90EE90
+    style V fill:#FFB6C1
+    style K fill:#FFE4B5
+    style L fill:#E6E6FA
+    style M fill:#E6E6FA
+    style N fill:#E6E6FA
+    style O fill:#E6E6FA
+    style P fill:#E6E6FA
+    style R fill:#F0E68C
+    style S fill:#DDA0DD
+    style T fill:#DDA0DD
+    style U fill:#DDA0DD

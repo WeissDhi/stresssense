@@ -1,0 +1,267 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}StressSense - Prediksi Risiko Depresi{% endblock %}
+    </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #3b82f6;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .nav-link.active::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header
+      class="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 shadow-lg"
+    >
+      <!-- Top Bar -->
+
+      <!-- Main Navigation -->
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <a href="/" class="flex items-center space-x-3">
+            <div class="bg-white p-2 rounded-lg shadow-md">
+              <i data-feather="activity" class="w-8 h-8 text-blue-600"></i>
+            </div>
+            <div class="text-white">
+              <h1 class="text-2xl font-bold">StressSense</h1>
+              <p class="text-sm text-blue-100">Prediksi Risiko Depresi</p>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="/"
+              class="nav-link text-white hover:text-blue-100 font-medium {% if request.path == '/' %}active{% endif %}"
+            >
+              Prediksi
+            </a>
+            <a
+              href="/edukasi"
+              class="nav-link text-white hover:text-blue-100 font-medium {% if request.path == '/edukasi' %}active{% endif %}"
+            >
+              Edukasi
+            </a>
+            <a
+              href="/direktori"
+              class="nav-link text-white hover:text-blue-100 font-medium {% if request.path == '/direktori' %}active{% endif %}"
+            >
+              Direktori RS/Klinik
+            </a>
+            <a
+              href="/tentang"
+              class="nav-link text-white hover:text-blue-100 font-medium {% if request.path == '/tentang' %}active{% endif %}"
+            >
+              Tentang
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            class="md:hidden text-white hover:text-blue-100 focus:outline-none"
+            onclick="toggleMobileMenu()"
+          >
+            <i data-feather="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+          <div class="flex flex-col space-y-4">
+            <a
+              href="/"
+              class="nav-link text-white hover:text-blue-100 font-medium px-4 py-2 rounded-lg hover:bg-blue-700 {% if request.path == '/' %}bg-blue-700{% endif %}"
+            >
+              Prediksi
+            </a>
+            <a
+              href="/edukasi"
+              class="nav-link text-white hover:text-blue-100 font-medium px-4 py-2 rounded-lg hover:bg-blue-700 {% if request.path == '/edukasi' %}bg-blue-700{% endif %}"
+            >
+              Edukasi
+            </a>
+            <a
+              href="/direktori"
+              class="nav-link text-white hover:text-blue-100 font-medium px-4 py-2 rounded-lg hover:bg-blue-700 {% if request.path == '/direktori' %}bg-blue-700{% endif %}"
+            >
+              Direktori
+            </a>
+            <a
+              href="/tentang"
+              class="nav-link text-white hover:text-blue-100 font-medium px-4 py-2 rounded-lg hover:bg-blue-700 {% if request.path == '/tentang' %}bg-blue-700{% endif %}"
+            >
+              Tentang
+            </a>
+            <a
+              href="/tentang#contact"
+              class="bg-white text-blue-600 px-6 py-2 rounded-full font-medium hover:bg-blue-50 transition-colors text-center shadow-md"
+            >
+              Hubungi Kami
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">{% block content %}{% endblock %}</main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- About Section -->
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="bg-blue-600 p-2 rounded-lg">
+                <i data-feather="activity" class="w-6 h-6 text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">StressSense</h3>
+                <p class="text-sm text-gray-400">Prediksi Risiko Depresi</p>
+              </div>
+            </div>
+            <p class="text-gray-400 text-sm">
+              Platform prediksi risiko depresi untuk membantu mahasiswa menjaga
+              kesehatan mental mereka.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Tautan Cepat</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="/"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Prediksi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/edukasi"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Edukasi</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/direktori"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Direktori</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/tentang"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Tentang</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Emergency Contact -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Kontak Darurat</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center text-gray-400">
+                <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                <a href="tel:119" class="hover:text-white transition-colors"
+                  >119 (Kemenkes)</a
+                >
+              </li>
+              <li class="flex items-center text-gray-400">
+                <i data-feather="phone" class="w-4 h-4 mr-2"></i>
+                <a
+                  href="tel:021-500454"
+                  class="hover:text-white transition-colors"
+                  >021-500454 (RSJ Dr. Soeharto Heerdjan)</a
+                >
+              </li>
+              <li class="flex items-center text-gray-400">
+                <i data-feather="mail" class="w-4 h-4 mr-2"></i>
+                <a
+                  href="mailto:contact@stresstense.com"
+                  class="hover:text-white transition-colors"
+                  >contact@stresstense.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Media Sosial</h3>
+            <div class="flex space-x-4">
+              <a
+                href="https://instagram.com/stresstense"
+                target="_blank"
+                class="bg-gray-800 p-2 rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                <i data-feather="instagram" class="w-5 h-5 text-white"></i>
+              </a>
+              <a
+                href="https://twitter.com/stresstense"
+                target="_blank"
+                class="bg-gray-800 p-2 rounded-lg hover:bg-blue-600 transition-colors"
+              >
+                <i data-feather="twitter" class="w-5 h-5 text-white"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm"
+        >
+          <p>&copy; 2024 StressSense. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Initialize Feather Icons
+      feather.replace();
+
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>

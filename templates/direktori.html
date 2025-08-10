@@ -1,0 +1,1183 @@
+{% extends 'base.html' %}
+
+{% block title %}Direktori RS/Klinik - StressSense{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-blue-800 mb-4">Direktori Rumah Sakit & Klinik</h1>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            Temukan fasilitas kesehatan mental terdekat untuk mendapatkan bantuan profesional yang Anda butuhkan.
+        </p>
+    </div>
+
+    <!-- Search and Filter Section -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+        <div class="p-6">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex-1">
+                    <label for="search" class="block text-sm font-medium text-gray-700 mb-2">Cari Fasilitas</label>
+                    <div class="relative">
+                        <input type="text" id="search" placeholder="Cari nama rumah sakit atau klinik..."
+                            class="w-full rounded-lg border-gray-300 pl-10 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                        <i data-feather="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+                    </div>
+                </div>
+                <div class="w-full md:w-48">
+                    <label for="filter" class="block text-sm font-medium text-gray-700 mb-2">Filter</label>
+                    <select id="filter" class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                        <option value="all">Semua Fasilitas</option>
+                        <option value="hospital">Rumah Sakit</option>
+                        <option value="clinic">Klinik</option>
+                        <option value="psychologist">Praktik Psikolog</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Facilities Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- RSJ Dr. Soeharto Heerdjan -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSJ Dr. Soeharto Heerdjan</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Jiwa</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Prof. Dr. Latumeten No.1, Jakarta Barat</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(021) 5682841</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri, psikologi, dan rehabilitasi</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://rsjsoehartoheerdjan.jakarta.go.id" target="_blank" 
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSJ Marzoeki Mahdi -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSJ Marzoeki Mahdi</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Jiwa</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Marzoeki Mahdi No.1, Bogor</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0251) 8324024</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri dan psikologi</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://rsjmarzoekimahdi.go.id" target="_blank" 
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi UI -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi UI</h3>
+                        <p class="text-gray-600 mb-4">Klinik Psikologi</p>
+                    </div>
+                    <span class="bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">Klinik</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Kampus UI Depok, Gedung IASTH Lt. 2</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(021) 7863520</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Jumat: 08.00-16.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan konseling dan psikoterapi</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://klinikpsikologi.ui.ac.id" target="_blank" 
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Yayasan Pulih -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Yayasan Pulih</h3>
+                        <p class="text-gray-600 mb-4">Lembaga Konseling</p>
+                    </div>
+                    <span class="bg-purple-100 text-purple-800 text-sm font-semibold px-3 py-1 rounded-full">Konseling</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Bungur Dalam No. 20, Jakarta Pusat</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(021) 78842580</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Jumat: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan konseling dan trauma healing</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://yayasanpulih.org" target="_blank" 
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Kasandra -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Kasandra</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Hang Lekir I No. 2, Jakarta Selatan</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(021) 7221732</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, tes psikologi, terapi</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://kasandrapratic.com" target="_blank" 
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikiatri Mitra Keluarga -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikiatri Mitra Keluarga</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit/Praktik Psikiater</p>
+                    </div>
+                    <span class="bg-pink-100 text-pink-800 text-sm font-semibold px-3 py-1 rounded-full">Psikiater</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Raya Kalimalang No. 12, Bekasi</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(021) 8845959</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 08.00-20.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikiatri, terapi obat, konseling</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://mitrakeluarga.com" target="_blank" 
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Tumbuh Kembang Anak -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Tumbuh Kembang Anak</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Cempaka Putih Tengah I No. 1, Jakarta Pusat</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(021) 42801234</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Jumat: 09.00-16.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Psikotes, terapi anak, konseling keluarga</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://klinikptka.com" target="_blank" 
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Universitas Gadjah Mada -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Universitas Gadjah Mada</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Humaniora No. 1, Bulaksumur, Yogyakarta</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0274) 563362</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Jumat: 08.00-16.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, tes psikologi, konseling keluarga</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://klinik.psikologi.ugm.ac.id" target="_blank" 
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Lentera Hati -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Lentera Hati</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Tebet Barat Dalam VIII No. 14, Jakarta Selatan</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(021) 83783212</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, terapi individu, konseling keluarga</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://lenterahati.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSUP Dr. Sardjito -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSUP Dr. Sardjito</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Umum Pusat</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Kesehatan No. 1, Yogyakarta</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0274) 587333</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri, psikologi, IGD</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://sardjito.co.id" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Anindya -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Anindya</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Cihampelas No. 45, Bandung</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(022) 2034567</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, terapi anak, konseling keluarga</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://anindyapsikologi.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSUP Dr. Hasan Sadikin -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSUP Dr. Hasan Sadikin</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Umum Pusat</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Pasteur No. 38, Bandung</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(022) 2034953</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri, psikologi, IGD</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://rshs.or.id" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Mitra Keluarga Surabaya -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Mitra Keluarga Surabaya</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Raya Darmo No. 100, Surabaya</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(031) 5678910</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, terapi keluarga, psikotes</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://mitrakeluarga.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSJ Dr. Radjiman Wediodiningrat -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSJ Dr. Radjiman Wediodiningrat</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Jiwa</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. A. Yani No. 2, Lawang, Malang</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0341) 426015</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri, psikologi, rehabilitasi</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://rsjrwlawang.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Insight Semarang -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Insight Semarang</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Pandanaran No. 50, Semarang</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(024) 8312345</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, terapi remaja, konseling keluarga</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://insightsemarang.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSUP Dr. Kariadi -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSUP Dr. Kariadi</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Umum Pusat</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Dr. Sutomo No. 16, Semarang</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(024) 8413476</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri, psikologi, IGD</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://rskariadi.co.id" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Sahabat Medan -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Sahabat Medan</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Gatot Subroto No. 123, Medan</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(061) 8456789</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, terapi anak, konseling keluarga</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://sahabatpsikologi.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSUP H. Adam Malik -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSUP H. Adam Malik</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Umum Pusat</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Bunga Lau No. 17, Medan</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(061) 8360143</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri, psikologi, IGD</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://adam-malikhospital.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Harmoni Makassar -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Harmoni Makassar</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Pettarani No. 10, Makassar</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0411) 876543</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, terapi keluarga, konseling remaja</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://harmonipsikologi.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSUP Dr. Wahidin Sudirohusodo -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSUP Dr. Wahidin Sudirohusodo</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Umum Pusat</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Perintis Kemerdekaan Km. 11, Makassar</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0411) 584677</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri, psikologi, IGD</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://rswahidin.co.id" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Mandiri Palembang -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Mandiri Palembang</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Jend. Sudirman No. 99, Palembang</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0711) 312345</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, terapi keluarga, konseling remaja</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://mandiripsikologi.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSUP Dr. Mohammad Hoesin -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSUP Dr. Mohammad Hoesin</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Umum Pusat</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Jend. Sudirman No. 137, Palembang</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0711) 354088</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri, psikologi, IGD</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://rsmh.co.id" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Cendekia Bali -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Cendekia Bali</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Raya Puputan No. 88, Denpasar, Bali</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0361) 234567</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, terapi keluarga, konseling remaja</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://cendekiapsikologi.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSUP Sanglah Bali -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSUP Sanglah Bali</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Umum Pusat</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Diponegoro No. 54, Denpasar, Bali</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0361) 227911</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri, psikologi, IGD</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://sanglahhospitalbali.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Sehat Jiwa Balikpapan -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Sehat Jiwa Balikpapan</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Jend. Sudirman No. 45, Balikpapan</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0542) 876543</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, terapi keluarga, konseling remaja</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://sehatjiwabpn.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSUD Kanujoso Djatiwibowo Balikpapan -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSUD Kanujoso Djatiwibowo Balikpapan</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Umum Daerah</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. MT Haryono No. 656, Balikpapan</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0542) 8765432</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri, psikologi, IGD</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://rsudkanujoso.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Klinik Psikologi Bahagia Pontianak -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">Klinik Psikologi Bahagia Pontianak</h3>
+                        <p class="text-gray-600 mb-4">Praktik Psikolog</p>
+                    </div>
+                    <span class="bg-yellow-100 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full">Psikolog</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Ahmad Yani No. 12, Pontianak</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0561) 123456</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Senin-Sabtu: 09.00-17.00</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Konsultasi psikologi, terapi keluarga, konseling remaja</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://bahagiapsikologi.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RSUD Dr. Soedarso Pontianak -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-blue-800 mb-2">RSUD Dr. Soedarso Pontianak</h3>
+                        <p class="text-gray-600 mb-4">Rumah Sakit Umum Daerah</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">Rumah Sakit</span>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <i data-feather="map-pin" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Jl. Dr. Soedarso No. 1, Pontianak</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="phone" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">(0561) 736011</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="clock" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">24 jam</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i data-feather="info" class="w-5 h-5 text-gray-500 mr-2 mt-1"></i>
+                        <p class="text-gray-600">Layanan psikiatri, psikologi, IGD</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-gray-200">
+                    <a href="https://rsudsoedarso.com" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+                        <i data-feather="external-link" class="w-4 h-4 mr-1"></i>
+                        Kunjungi Website
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Information -->
+    <div class="mt-8 bg-blue-50 rounded-xl shadow-lg overflow-hidden">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+                <i data-feather="info" class="w-6 h-6 mr-2"></i>
+                Informasi Tambahan
+            </h2>
+            <div class="prose prose-blue max-w-none">
+                <p class="text-gray-600 mb-4">
+                    Sebelum mengunjungi fasilitas kesehatan mental, perhatikan hal-hal berikut:
+                </p>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                        <span>Pastikan fasilitas memiliki izin resmi dari Kemenkes RI</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                        <span>Periksa apakah tenaga kesehatan memiliki sertifikasi yang sesuai</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                        <span>Hubungi fasilitas terlebih dahulu untuk informasi biaya dan jadwal</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                        <span>Beberapa fasilitas menerima BPJS Kesehatan</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Contact -->
+    <div class="mt-8 bg-red-50 rounded-xl shadow-lg overflow-hidden">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-red-800 mb-4 flex items-center">
+                <i data-feather="phone" class="w-6 h-6 mr-2"></i>
+                Kontak Darurat
+            </h2>
+            <p class="text-gray-600 mb-4">
+                Jika Anda atau seseorang yang Anda kenal mengalami krisis kesehatan mental, segera hubungi:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-lg">
+                    <h3 class="font-semibold text-red-700 mb-2">Kemenkes RI</h3>
+                    <p class="text-2xl font-bold text-red-600">119</p>
+                    <p class="text-gray-600 text-sm">Layanan 24 jam</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <h3 class="font-semibold text-red-700 mb-2">RSJ Dr. Soeharto Heerdjan</h3>
+                    <p class="text-2xl font-bold text-red-600">(021) 5682841</p>
+                    <p class="text-gray-600 text-sm">Layanan 24 jam</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Initialize Feather Icons
+    feather.replace();
+
+    // Simple search functionality
+    document.getElementById('search').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const facilities = document.querySelectorAll('.bg-white.rounded-xl');
+        
+        facilities.forEach(facility => {
+            const title = facility.querySelector('h3').textContent.toLowerCase();
+            const description = facility.querySelector('p.text-gray-600').textContent.toLowerCase();
+            
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                facility.style.display = '';
+            } else {
+                facility.style.display = 'none';
+            }
+        });
+    });
+
+    // Filter functionality
+    document.getElementById('filter').addEventListener('change', function(e) {
+        const filterValue = e.target.value;
+        const facilities = document.querySelectorAll('.bg-white.rounded-xl');
+        
+        facilities.forEach(facility => {
+            const type = facility.querySelector('span').textContent.toLowerCase();
+            
+            if (filterValue === 'all' || type.includes(filterValue)) {
+                facility.style.display = '';
+            } else {
+                facility.style.display = 'none';
+            }
+        });
+    });
+</script>
+{% endblock %}

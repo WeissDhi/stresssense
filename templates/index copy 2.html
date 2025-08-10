@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+{% block title %}Prediksi Risiko Depresi{% endblock %}
+{% block content %}
+<div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-8">
+  <h2 class="text-3xl font-bold text-center mb-6 text-blue-700">
+    Prediksi Risiko Depresi Mahasiswa
+  </h2>
+  <p class="text-gray-600 mb-6 text-center">
+    Masukkan data pribadi Anda dengan lengkap dan jujur. Hasil prediksi ini bersifat indikasi awal, bukan diagnosis medis resmi. Jika Anda merasa membutuhkan bantuan, segera konsultasikan dengan tenaga kesehatan profesional.
+  </p>
+  <form method="POST" class="space-y-4">
+    <!-- Input Utama -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label class="block font-semibold">Jenis Kelamin</label>
+        <select name="gender" class="w-full border-gray-300 rounded-md p-2" required>
+          <option value="" disabled selected>Pilih...</option>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+      </div>
+      <div>
+        <label class="block font-semibold">Usia (17-25 tahun)</label>
+        <input
+          type="number"
+          name="age"
+          min="17"
+          max="25"
+          required
+          class="w-full border-gray-300 rounded-md p-2"
+          placeholder="Contoh: 20"
+        />
+      </div>
+      <div>
+        <label class="block font-semibold">IPK (0-4)</label>
+        <input
+          type="number"
+          name="cgpa"
+          step="0.01"
+          min="0"
+          max="4"
+          required
+          class="w-full border-gray-300 rounded-md p-2"
+          placeholder="Contoh: 3.5"
+        />
+      </div>
+      <div>
+        <label class="block font-semibold">Durasi Tidur (jam/hari)</label>
+        <input
+          type="number"
+          name="sleep_duration"
+          step="0.1"
+          required
+          class="w-full border-gray-300 rounded-md p-2"
+          placeholder="Contoh: 7.5"
+        />
+      </div>
+      <div>
+        <label class="block font-semibold">Tekanan Akademik (1-10)</label>
+        <input
+          type="number"
+          name="academic_pressure"
+          min="1"
+          max="10"
+          required
+          class="w-full border-gray-300 rounded-md p-2"
+          placeholder="Contoh: 7"
+        />
+      </div>
+      <div>
+        <label class="block font-semibold">Tekanan Pekerjaan (1-10)</label>
+        <input
+          type="number"
+          name="work_pressure"
+          min="1"
+          max="10"
+          required
+          class="w-full border-gray-300 rounded-md p-2"
+          placeholder="Contoh: 5"
+        />
+      </div>
+      <div>
+        <label class="block font-semibold">Stres Finansial (1-10)</label>
+        <input
+          type="number"
+          name="financial_stress"
+          min="1"
+          max="10"
+          required
+          class="w-full border-gray-300 rounded-md p-2"
+          placeholder="Contoh: 6"
+        />
+      </div>
+      <div>
+        <label class="block font-semibold">Riwayat Keluarga dengan Gangguan Mental</label>
+        <select name="family_history" class="w-full border-gray-300 rounded-md p-2" required>
+          <option value="" disabled selected>Pilih...</option>
+          <option value="Ya">Ya</option>
+          <option value="Tidak">Tidak</option>
+        </select>
+      </div>
+      <div>
+        <label class="block font-semibold">Masalah Keuangan</label>
+        <select name="financial_problem" class="w-full border-gray-300 rounded-md p-2" required>
+          <option value="" disabled selected>Pilih...</option>
+          <option value="Ya">Ya</option>
+          <option value="Tidak">Tidak</option>
+        </select>
+      </div>
+      <div>
+        <label class="block font-semibold">Masalah Kesehatan</label>
+        <select name="health_issue" class="w-full border-gray-300 rounded-md p-2" required>
+          <option value="" disabled selected>Pilih...</option>
+          <option value="Ya">Ya</option>
+          <option value="Tidak">Tidak</option>
+        </select>
+      </div>
+      <div>
+        <label class="block font-semibold">Dukungan Sosial</label>
+        <select name="social_support" class="w-full border-gray-300 rounded-md p-2" required>
+          <option value="" disabled selected>Pilih...</option>
+          <option value="Ya">Ya</option>
+          <option value="Tidak">Tidak</option>
+        </select>
+      </div>
+      <div>
+        <label class="block font-semibold">Pola Makan</label>
+        <select name="diet" class="w-full border-gray-300 rounded-md p-2" required>
+          <option value="" disabled selected>Pilih...</option>
+          <option value="Baik">Baik</option>
+          <option value="Cukup">Cukup</option>
+          <option value="Buruk">Buruk</option>
+        </select>
+      </div>
+      <div>
+        <label class="block font-semibold">Kehilangan Minat</label>
+        <select name="lost_interest" class="w-full border-gray-300 rounded-md p-2" required>
+          <option value="" disabled selected>Pilih...</option>
+          <option value="Ya">Ya</option>
+          <option value="Tidak">Tidak</option>
+        </select>
+      </div>
+      <div>
+        <label class="block font-semibold">Pernah Memiliki Pemikiran Bunuh Diri?</label>
+        <select name="suicidal_thoughts" class="w-full border-gray-300 rounded-md p-2" required>
+          <option value="" disabled selected>Pilih...</option>
+          <option value="Ya">Ya</option>
+          <option value="Tidak">Tidak</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Mood Slider -->
+    <div>
+      <label class="block font-semibold">Bagaimana suasana hati Anda hari ini?</label>
+      <input type="range" name="mood_level" min="1" max="5" value="3" class="w-full" id="moodSlider" />
+      <div class="flex justify-between text-gray-600 text-sm">
+        <span>😞 Sangat Sedih</span>
+        <span>🙂 Netral</span>
+        <span>😊 Bahagia</span>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="w-full bg-blue-600 text-white font-bold py-2 rounded-md hover:bg-blue-700 transition transform hover:scale-105"
+    >
+      Prediksi Sekarang
+    </button>
+  </form>
+
+  <!-- Hasil Prediksi -->
+  {% if prediction is not none %}
+  <div class="mt-6 p-4 bg-red-100 border border-red-200 rounded-md text-center text-lg font-semibold text-red-600">
+    Estimasi Risiko Depresi Anda: {{ prediction }}%
+  </div>
+  {% endif %}
+
+  <!-- Grafik Mood Harian -->
+  <div class="mt-8">
+    <h3 class="text-2xl font-semibold mb-2">Mood Tracker</h3>
+    <canvas id="moodChart" class="w-full h-64"></canvas>
+  </div>
+
+  <!-- Tips Self-care -->
+  <div class="mt-8 bg-green-50 p-4 rounded-md">
+    <h3 class="text-xl font-bold mb-2 text-green-700">Tips Self-care</h3>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>Luangkan waktu 5 menit untuk meditasi pernapasan.</li>
+      <li>Jalan kaki ringan selama 10 menit setiap hari.</li>
+      <li>Tulis jurnal syukur sebelum tidur.</li>
+    </ul>
+  </div>
+
+  <!-- Testimoni Singkat -->
+  <div class="mt-8 bg-yellow-50 p-4 rounded-md">
+    <h3 class="text-xl font-bold mb-2 text-yellow-800">Testimoni</h3>
+    <blockquote class="italic text-gray-800">
+      “Setelah rutin mencatat mood harian, saya jadi lebih sadar kapan butuh istirahat. Website ini membantu saya mengelola stres lebih baik.” – Siska, 21 tahun
+    </blockquote>
+  </div>
+</div>
+
+<!-- Skrip JavaScript untuk Mood Tracker dan Progress -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Simpan mood harian ke Local Storage
+  const form = document.querySelector('form');
+  form.addEventListener('submit', () => {
+    const mood = document.getElementById('moodSlider').value;
+    let moods = JSON.parse(localStorage.getItem('moodData') || '[]');
+    const today = new Date().toLocaleDateString();
+    moods.push({ date: today, value: mood });
+    if (moods.length > 7) moods.shift(); // Simpan hanya 7 hari terakhir
+    localStorage.setItem('moodData', JSON.stringify(moods));
+  });
+
+  // Render Grafik Mood Harian
+  function renderMoodChart() {
+    const ctx = document.getElementById('moodChart').getContext('2d');
+    const moods = JSON.parse(localStorage.getItem('moodData') || '[]');
+    const labels = moods.map(item => item.date);
+    const data = moods.map(item => item.value);
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [{
+          label: 'Tingkat Mood',
+          data,
+          fill: true,
+          tension: 0.4,
+          borderColor: '#3B82F6',
+          backgroundColor: 'rgba(59, 130, 246, 0.1)'
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            min: 1,
+            max: 5,
+            ticks: { stepSize: 1 }
+          }
+        }
+      }
+    });
+  }
+  renderMoodChart();
+</script>
+{% endblock %}

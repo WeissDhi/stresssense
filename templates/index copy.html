@@ -1,0 +1,179 @@
+{% extends 'base.html' %} {% block title %}Prediksi Depresi{% endblock %} {%
+block content %}
+<div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-8">
+  <h2 class="text-3xl font-bold text-center mb-6 text-blue-700">
+    Prediksi Risiko Depresi
+  </h2>
+
+  <form method="POST" class="space-y-4">
+    <div>
+      <label class="block font-semibold">Gender</label>
+      <select name="gender" class="w-full border-gray-300 rounded-md p-2">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-semibold">Age (17-25)</label>
+      <input
+        type="number"
+        name="age"
+        min="17"
+        max="25"
+        required
+        class="w-full border-gray-300 rounded-md p-2"
+      />
+    </div>
+
+    <div>
+      <label class="block font-semibold">CGPA (0-4)</label>
+      <input
+        type="number"
+        name="cgpa"
+        step="0.01"
+        min="0"
+        max="4"
+        required
+        class="w-full border-gray-300 rounded-md p-2"
+      />
+    </div>
+
+    <div>
+      <label class="block font-semibold">Sleep Duration (hours)</label>
+      <input
+        type="number"
+        name="sleep_duration"
+        step="0.1"
+        required
+        class="w-full border-gray-300 rounded-md p-2"
+      />
+    </div>
+
+    <div>
+      <label class="block font-semibold">Academic Pressure (1-10)</label>
+      <input
+        type="number"
+        name="academic_pressure"
+        min="1"
+        max="10"
+        required
+        class="w-full border-gray-300 rounded-md p-2"
+      />
+    </div>
+
+    <div>
+      <label class="block font-semibold">Work Pressure (1-10)</label>
+      <input
+        type="number"
+        name="work_pressure"
+        min="1"
+        max="10"
+        required
+        class="w-full border-gray-300 rounded-md p-2"
+      />
+    </div>
+
+    <div>
+      <label class="block font-semibold">Financial Stress (1-10)</label>
+      <input
+        type="number"
+        name="financial_stress"
+        min="1"
+        max="10"
+        required
+        class="w-full border-gray-300 rounded-md p-2"
+      />
+    </div>
+
+    <div>
+      <label class="block font-semibold"
+        >Family History of Mental Illness?</label
+      >
+      <select
+        name="family_history"
+        class="w-full border-gray-300 rounded-md p-2"
+      >
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-semibold">Financial Problem</label>
+      <select
+        name="financial_problem"
+        class="w-full border-gray-300 rounded-md p-2"
+      >
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-semibold">Health Issue</label>
+      <select name="health_issue" class="w-full border-gray-300 rounded-md p-2">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-semibold">Social Support</label>
+      <select
+        name="social_support"
+        class="w-full border-gray-300 rounded-md p-2"
+      >
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-semibold">Diet</label>
+      <select name="diet" class="w-full border-gray-300 rounded-md p-2">
+        <option>Good</option>
+        <option>Average</option>
+        <option>Poor</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-semibold">Lost Interest</label>
+      <select
+        name="lost_interest"
+        class="w-full border-gray-300 rounded-md p-2"
+      >
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block font-semibold"
+        >Have you ever had suicidal thoughts?</label
+      >
+      <select
+        name="suicidal_thoughts"
+        class="w-full border-gray-300 rounded-md p-2"
+      >
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+    </div>
+
+    <button
+      type="submit"
+      class="w-full bg-blue-600 text-white font-bold py-2 rounded-md hover:bg-blue-700 transition"
+    >
+      Predict
+    </button>
+  </form>
+
+  {% if prediction is not none %}
+  <div class="mt-6 text-center text-lg font-semibold text-red-600">
+    Estimated Depression Risk: {{ prediction }}%
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

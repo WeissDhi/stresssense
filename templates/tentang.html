@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+
+{% block title %}Tentang StressSense{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-blue-800 mb-4">Tentang StressSense</h1>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+            Platform prediksi risiko depresi untuk membantu mahasiswa menjaga kesehatan mental mereka.
+        </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Our Mission -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+                    <i data-feather="target" class="w-6 h-6 mr-2"></i>
+                </h2>
+                <div class="prose prose-blue max-w-none">
+                    <p class="text-gray-600 mb-4">
+                        StressSense hadir untuk membantu mahasiswa dalam mengidentifikasi risiko depresi sejak dini. 
+                        Kami berkomitmen untuk memberikan akses ke informasi dan sumber daya yang diperlukan untuk 
+                        menjaga kesehatan mental.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                            <span>Menyediakan alat prediksi risiko depresi yang akurat</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                            <span>Memberikan edukasi tentang kesehatan mental</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="w-5 h-5 text-blue-500 mr-2 mt-1"></i>
+                            <span>Memudahkan akses ke layanan kesehatan mental</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-green-800 mb-4 flex items-center">
+                    <i data-feather="help-circle" class="w-6 h-6 mr-2"></i>
+                    Cara Kerja
+                </h2>
+                <div class="prose prose-green max-w-none">
+                    <p class="text-gray-600 mb-4">
+                        StressSense menggunakan model machine learning yang telah dilatih dengan data dari ribuan mahasiswa 
+                        untuk memberikan prediksi risiko depresi yang akurat.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-green-800 mb-2">1. Input Data</h3>
+                            <p class="text-gray-600">Masukkan data pribadi dan kondisi mental Anda melalui formulir yang telah disediakan.</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-blue-800 mb-2">2. Analisis</h3>
+                            <p class="text-gray-600">Sistem akan menganalisis data Anda menggunakan model machine learning yang telah terlatih.</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-purple-800 mb-2">3. Hasil & Rekomendasi</h3>
+                            <p class="text-gray-600">Dapatkan prediksi risiko dan rekomendasi tindakan yang sesuai dengan kondisi Anda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-purple-800 mb-4 flex items-center">
+                    <i data-feather="cpu" class="w-6 h-6 mr-2"></i>
+                    Teknologi
+                </h2>
+                <div class="prose prose-purple max-w-none">
+                    <p class="text-gray-600 mb-4">
+                        StressSense dibangun menggunakan teknologi modern untuk memberikan pengalaman terbaik bagi pengguna:
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-purple-800 mb-2">Machine Learning</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="w-5 h-5 text-purple-500 mr-2 mt-1"></i>
+                                    <span>Model CatBoost untuk prediksi</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="w-5 h-5 text-purple-500 mr-2 mt-1"></i>
+                                    <span>Akurasi prediksi yang tinggi</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-indigo-800 mb-2">Web Development</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="w-5 h-5 text-indigo-500 mr-2 mt-1"></i>
+                                    <span>Flask Framework</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="w-5 h-5 text-indigo-500 mr-2 mt-1"></i>
+                                    <span>Tailwind CSS</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="p-6">
+                <h2 class="text-2xl font-bold text-pink-800 mb-4 flex items-center">
+                    <i data-feather="users" class="w-6 h-6 mr-2"></i>
+                    Tim Kami
+                </h2>
+                <div class="prose prose-pink max-w-none">
+                    <p class="text-gray-600 mb-4">
+                        StressSense dikembangkan oleh tim yang berdedikasi untuk meningkatkan kesehatan mental mahasiswa:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-pink-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-pink-800 mb-2">Pengembang</h3>
+                            <p class="text-gray-600">Teuku Ardhi</p>
+                            <p class="text-sm text-gray-500">Mahasiswa Teknik Informatika</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <h3 class="font-semibold text-yellow-800 mb-2">Pembimbing</h3>
+                            <p class="text-gray-600">Dosen Pembimbing Skripsi</p>
+                            <p class="text-sm text-gray-500">Fakultas Teknik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="mt-8 bg-blue-50 rounded-xl shadow-lg overflow-hidden">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+                <i data-feather="mail" class="w-6 h-6 mr-2"></i>
+                Hubungi Kami
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <p class="text-gray-600 mb-4">
+                        Untuk pertanyaan, saran, atau kolaborasi, silakan hubungi kami melalui:
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="w-5 h-5 text-blue-500 mr-2"></i>
+                            <a href="mailto:contact@stresstense.com" class="text-blue-600 hover:text-blue-800">contact@stresstense.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="instagram" class="w-5 h-5 text-blue-500 mr-2"></i>
+                            <a href="https://instagram.com/stresstense" target="_blank" class="text-blue-600 hover:text-blue-800">@stresstense</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2">Alamat</h3>
+                    <p class="text-gray-600">
+                        Universitas Syiah Kuala<br>
+                        Fakultas Teknik<br>
+                        Banda Aceh, Aceh
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="mt-8 bg-yellow-50 rounded-xl shadow-lg overflow-hidden">
+        <div class="p-6">
+            <h2 class="text-2xl font-bold text-yellow-800 mb-4 flex items-center">
+                <i data-feather="alert-triangle" class="w-6 h-6 mr-2"></i>
+                Penafian
+            </h2>
+            <div class="prose prose-yellow max-w-none">
+                <p class="text-gray-600">
+                    StressSense adalah alat prediksi yang bersifat indikatif dan tidak menggantikan diagnosis medis resmi. 
+                    Hasil prediksi sebaiknya digunakan sebagai panduan awal untuk mengenali kondisi kesehatan mental Anda. 
+                    Untuk diagnosis dan penanganan yang tepat, konsultasikan dengan tenaga kesehatan profesional.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Initialize Feather Icons
+    feather.replace();
+</script>
+{% endblock %}
