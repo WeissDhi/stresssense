@@ -214,6 +214,16 @@ StressSense{% endblock %} {% block content %}
             <i data-feather="activity" class="w-5 h-5 mr-2"></i>
             Penilaian Tekanan
           </h2>
+            <p class="text-gray-600 mb-4">
+               <b>Petunjuk:</b> Isi skala 1–10 sesuai kondisi Anda. 
+            <br>
+              <span class="block mt-2">
+                <b>1–3:</b> Tekanan rendah &nbsp;|&nbsp; <b>4–7:</b> Tekanan sedang &nbsp;|&nbsp; <b>8–10:</b> Tekanan tinggi
+                </span>
+                <span span class="block mt-2">
+                 <b>Tekanan Pekerjaan:</b> Jika Anda belum bekerja, isi dengan angka terendah (1).
+                </span>
+            </p>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
               <label class="block text-sm font-medium text-gray-700 mb-2"
@@ -271,9 +281,9 @@ StressSense{% endblock %} {% block content %}
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2"
-                >Pernah Memiliki Pemikiran Bunuh Diri?</label
-              >
+            <p class="text-gray-600 mb-4">
+               <b>Pernah memiliki pemikiran bunuh diri?</b> Pilih "Ya" jika Anda pernah mengalami pemikiran tersebut, meskipun hanya sekali. Data ini bersifat rahasia dan hanya digunakan untuk analisis risiko.
+             </p>
               <select
                 name="suicidal_thoughts"
                 class="w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50 transition-colors"
@@ -323,12 +333,37 @@ StressSense{% endblock %} {% block content %}
           Risiko Sedang {% else %} Risiko Rendah {% endif %}
         </h3>
         <p class="text-gray-600">
-          {% if prediction >= 70 %} Kami menyarankan Anda untuk segera
-          berkonsultasi dengan tenaga kesehatan profesional. Jangan ragu untuk
-          mencari bantuan. {% elif prediction >= 40 %} Perhatikan kesehatan
-          mental Anda dan pertimbangkan untuk berkonsultasi dengan tenaga
-          kesehatan profesional. {% else %} Tetap jaga kesehatan mental Anda
-          dengan menerapkan pola hidup sehat dan seimbang. {% endif %}
+          {% if prediction >= 70 %}
+            Anda memiliki risiko depresi yang tinggi.<br>
+            <b>Rekomendasi:</b>
+            <ul class="list-disc ml-6 mt-2 text-gray-700">
+              <li>Segera konsultasikan dengan psikolog, psikiater, atau tenaga kesehatan profesional untuk penanganan lebih lanjut.</li>
+              <li>Jangan menunda mencari bantuan jika mengalami gejala berat seperti putus asa, ingin menyakiti diri, atau kehilangan minat pada aktivitas sehari-hari.</li>
+              <li>Libatkan keluarga atau teman dekat untuk dukungan emosional.</li>
+              <li>Ikuti terapi atau konseling sesuai anjuran tenaga kesehatan.</li>
+              <li>Jaga rutinitas harian, pola tidur, dan konsumsi makanan bergizi.</li>
+            </ul>
+          {% elif prediction >= 40 %}
+            Risiko depresi Anda berada pada tingkat sedang.<br>
+            <b>Rekomendasi:</b>
+            <ul class="list-disc ml-6 mt-2 text-gray-700">
+              <li>Mulai lakukan self-care seperti olahraga ringan, meditasi, dan journaling.</li>
+              <li>Bicarakan perasaan Anda dengan orang terpercaya, seperti keluarga atau sahabat.</li>
+              <li>Perhatikan gejala yang muncul dan jangan ragu untuk berkonsultasi jika keluhan menetap atau memburuk.</li>
+              <li>Ikuti edukasi kesehatan mental dan tips yang tersedia di aplikasi.</li>
+              <li>Jaga keseimbangan antara aktivitas akademik, pekerjaan, dan waktu istirahat.</li>
+            </ul>
+          {% else %}
+            Risiko depresi Anda rendah.<br>
+            <b>Rekomendasi:</b>
+            <ul class="list-disc ml-6 mt-2 text-gray-700">
+              <li>Pertahankan pola hidup sehat, tidur cukup, dan konsumsi makanan bergizi.</li>
+              <li>Terus lakukan aktivitas positif dan tetap terhubung dengan lingkungan sosial.</li>
+              <li>Kelola stres dengan teknik relaksasi seperti meditasi atau olahraga.</li>
+              <li>Jika suatu saat merasa tertekan, jangan ragu untuk mencari bantuan atau konsultasi.</li>
+              <li>Ikuti edukasi dan tips kesehatan mental secara rutin untuk pencegahan.</li>
+            </ul>
+          {% endif %}
         </p>
       </div>
     </div>
